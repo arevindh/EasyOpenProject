@@ -30,7 +30,7 @@ path.link {
   <body>
     <div id="body">
       <div id="footer">
-        
+
         <div class="hint">click or option-click to expand or collapse</div>
       </div>
     </div>
@@ -54,7 +54,7 @@ var vis = d3.select("#body").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
-d3.json("data1.php", function(json) {
+d3.json("data.php", function(json) {
   root = json;
   root.x0 = h / 2;
   root.y0 = 0;
@@ -83,8 +83,8 @@ function update(source) {
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
-  var colors= ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 
-'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'red', 
+  var colors= ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green',
+'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'red',
 'silver', 'teal', 'white', 'yellow'];
 
   // Normalize for fixed-depth.
@@ -190,4 +190,3 @@ function toggle(d) {
     </script>
   </body>
 </html>
-
